@@ -5,6 +5,7 @@ import com.nhnacademy.edu.springboot.student.repository.StudentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class NhnStudentService implements StudentService{
@@ -22,16 +23,20 @@ public class NhnStudentService implements StudentService{
 
     @Override
     public Student createStudent(Student student) {
-        return null;
+        if(studentRepository.existsById(student.getId())){
+            throw new IllegalStateException("id : " + student.getId() + "is already exist");
+        }
+        return studentRepository.save(student);
     }
 
     @Override
     public Student getStudent(Long id) {
-        return null;
+        return studentRepository.findById(id)
+                .orElse(null);
     }
 
     @Override
     public void deleteStudent(Long id) {
-
+        studentRepository.deleteById(id);
     }
 }

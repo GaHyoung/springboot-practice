@@ -1,0 +1,19 @@
+###계좌 등록
+POST http://localhost:8080/account
+Content-Type: application/json
+
+{
+  "id": 5,
+  "number": "100-",
+  "balance": 500
+}
+
+
+###계좌 조회
+GET http://localhost:8080/account/1
+Content-Type: application/json
+
+###계좌 삭제
+DELETE http://localhost:8080/account/1
+Content-Type: application/json
+

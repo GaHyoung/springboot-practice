@@ -1,0 +1,16 @@
+###학생 등록
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "id" : 10,
+  "name" : "zbum",
+  "score" : 100
+}
+
+###학생 조회
+GET http://localhost:8080/students/10
+Content-Type: application/json
+
+###학생 삭제
+DELETE http://localhost:8080/students/10

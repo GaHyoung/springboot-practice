@@ -8,7 +8,7 @@ public class StudentApplication {
 
 	public static void main(String[] args) {
 		//spring-boot 시작 명령.
-		// args를 넣지않으면 외부에서 넣는 인자가 넘어오지 않는 문제 발생할 수 있음.
+		//args를 넣지않으면 외부에서 넣는 인자가 넘어오지 않는 문제 발생할 수 있음.
 		SpringApplication.run(StudentApplication.class, args);
 	}
 
