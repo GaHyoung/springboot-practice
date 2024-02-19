@@ -2,9 +2,11 @@ package com.nhnacademy.edu.springboot.student;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication //spring-boot 실행의 시작점
-public class StudentApplication {
+public class StudentApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		//spring-boot 시작 명령.
@@ -12,4 +14,8 @@ public class StudentApplication {
 		SpringApplication.run(StudentApplication.class, args);
 	}
 
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+		return builder.sources(StudentApplication.class);
+	}
 }
