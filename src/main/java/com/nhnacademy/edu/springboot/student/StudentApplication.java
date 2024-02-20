@@ -7,7 +7,8 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-@EnableConfigurationProperties
+//@EnableConfigurationProperties
+@ConfigurationPropertiesScan
 @SpringBootApplication //spring-boot 실행의 시작점
 public class StudentApplication  {
 
