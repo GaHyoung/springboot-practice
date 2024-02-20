@@ -3,8 +3,11 @@ package com.nhnacademy.edu.springboot.student;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+@EnableConfigurationProperties
 @SpringBootApplication //spring-boot 실행의 시작점
 public class StudentApplication  {
 
