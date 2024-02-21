@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode
 @Entity
 @NoArgsConstructor
-@Table(schema = "students")
+@Table(name = "students")
 public class Student {
     @Id
     private Long id;

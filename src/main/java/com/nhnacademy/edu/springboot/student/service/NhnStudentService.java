@@ -30,7 +30,7 @@ public class NhnStudentService implements StudentService{
     }
 
     @Override
-    public Student getStudent(Long id) {
+    public Student  getStudent(Long id) {
         return studentRepository.findById(id)
                 .orElse(null);
     }
